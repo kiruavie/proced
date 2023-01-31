@@ -1,0 +1,38 @@
+PROCEDURE dotProduct(u, v : FLOAT)
+VAR
+    ps: FLOAT 
+    u : ARRAY_OF FLOAT[3]
+    v : ARRAY_OF FLOAT[3]
+BEGIN
+    FOR i FROM 0 TO 2 STEP 1  DO
+        Write("entrer l'element", i+1, " du vecteur u")
+        Read(u[i])
+        Write("entrer l'element", i+1, " du vecteur v")
+        Read(v[i])
+
+    END_FOR
+
+    FOR i FROM 0 TO 2 STEP 1  DO
+        ps := ps + u[i] * v[i]
+    END_FOR
+END
+
+
+FUNCTION Product(vect_A, vect_B) : FLOAT
+VAR
+    product: FLOAT := 0
+BEGIN
+    FOR i FROM 0 TO 2 STEP 1  DO
+        product:= product + vect_A[i] + vect_B[i]
+    END_FOR
+END
+
+
+ALGORITHM Produit
+VAR
+    n : INTEGER
+BEGIN
+    Write("Le produit scalaire des vecteurs est : ")
+    dotProduct()
+    Produit()
+END
